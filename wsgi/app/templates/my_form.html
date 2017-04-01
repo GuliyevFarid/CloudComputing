@@ -1,7 +1,17 @@
 {% extends "base.html" %}
-{% block title %}<img src="{{ url_for('static', filename = 'img/'+mood+'_face.jpeg')}}", width=320, height=240, quality=95 />
+{% block title %}
 {% endblock %}
 {% block content %}
+<p>The following app provides to analyze entered input and find out the mood.</p>
+<center>
+<table style="width: 300px">
+<tr ><td>positive</td><td><img src="{{ url_for('static', filename = 'img/Positive_face.jpeg')}}", width=40, height=30, quality=95 /></td></tr>
+<tr><td>negative</td><td><img src="{{ url_for('static', filename = 'img/Negative_face.jpeg')}}", width=40, height=30, quality=95 /></td></tr>
+<tr><td>neutral</td><td><img src="{{ url_for('static', filename = 'img/Neutral_face.jpeg')}}", width=40, height=30, quality=95 /></td></tr>
+</table>
+</center>
+<br/><br />
+<img src="{{ url_for('static', filename = 'img/'+mood+'_face.jpeg')}}", width=320, height=240, quality=95 />
 <form action="" method="POST">
  	{{ form.csrf_token }}
  	{{ form.message.label }} 

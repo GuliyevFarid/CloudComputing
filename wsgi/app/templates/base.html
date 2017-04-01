@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>QMUL ECS781P - 2017</title>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+ <title>QMUL ECS781P - 2017</title>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="/static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="/static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-</head>
+ <!-- CSS -->
+
+ <!-- Compiled and minified CSS -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% block header %}{% endblock %}
+ </head>
 <body>
-  <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+  <nav class="blue darken-3" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Farid's website</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="/visualization">Visualization</a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/database/collections">Database</a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/emotion">Web API</a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="/visualization">Visualization</a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="/database/collections">Database</a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="/emotion">Web API</a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="/">Home</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -26,7 +47,7 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h1 class="header center orange-text">{% block title %}{% endblock %}</h1>
+      <h1 class="header center blue-text">{% block title %}{% endblock %}</h1>
       <div class="row center">
           {% block content %}{% endblock %}
       </div>
@@ -43,41 +64,40 @@
     </div>
   </div>
 
-  <footer class="page-footer orange">
+  <footer class="page-footer blue accent-2">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">About us</h5>
-          <p class="grey-text text-lighten-4">We are a startup.</p>
+          <h5 class="white-text">About me</h5>
+          <p class="grey-text text-lighten-4">My name is Farid, I study MSc Software Engineering.</p>
 
 
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Visit</h5>
+          <h5 class="white-text"> </h5>
           <ul>
-            <li><a class="white-text" href="#!">Our homepage</a></li>
+            <li><a class="white-text" href="#"> </a></li>
           </ul>
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">Contact</h5>
           <ul>
-            <li><a class="white-text" href="mailto:youremail@qmul.ac.uk">youremail@qmul.ac.uk</a></li>
+            <li><a class="white-text" href="mailto:f.guliyev@se16.qmul.ac.uk">f.guliyev@se16.qmul.ac.uk</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      Made by <a class="blue-text text-lighten-3" href="http://materializecss.com">Materialize</a>
       </div>
     </div>
   </footer>
 
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="/static/js/materialize.js"></script>
-  <script src="/static/js/init.js"></script>
+<!-- Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 
   </body>
 </html>
