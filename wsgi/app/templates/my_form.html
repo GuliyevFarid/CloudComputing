@@ -1,8 +1,8 @@
 {% extends "base.html" %}
-{% block title %}
+{% block title %}Mood analyzer
 {% endblock %}
 {% block content %}
-<p>The following app provides to analyze entered input and find out the mood.</p>
+<p><b>The following page provides to analyze entered input and find out the mood.</b></p>
 <center>
 <table style="width: 300px">
 <tr ><td>positive</td><td><img src="{{ url_for('static', filename = 'img/Positive_face.jpeg')}}", width=40, height=30, quality=95 /></td></tr>
@@ -14,7 +14,7 @@
 <img src="{{ url_for('static', filename = 'img/'+mood+'_face.jpeg')}}", width=320, height=240, quality=95 />
 <form action="" method="POST">
  	{{ form.csrf_token }}
- 	{{ form.message.label }} 
+ 	{{ form.message.label }}
  	{{ form.message(size=200) }}
     <input type=submit value="Send">
 </form>

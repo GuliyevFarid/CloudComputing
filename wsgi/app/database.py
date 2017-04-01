@@ -1,5 +1,5 @@
 from flask_pymongo import PyMongo
-from flask import jsonify
+from flask import jsonify, render_template
 from app import app
 import os
 
@@ -26,10 +26,14 @@ def get_all_collections():
 @app.route('/database/London/sample', methods=['GET'])
 def get_sample_document():
 	collection = mongo.db.London_Visitors
-	document = collection.find_one()
+	#document = collection.find_one()
 	output = []
-	output.append({attr:value for attr, value in document.iteritems() if attr!=u'_id'})
-	print(output)
-	print(dir(output))
-	return jsonify({'sample record' : output})
+	i = 0;
+	for document in collection.find():
+		i=i+1
+		if i > 50:
+		   break
 
+		output.append({attr:value for attr, value in document.iteritems() if attr!=u'_id'})
+	#return jsonify({'sample record' : output})
+	return render_template("db.html",mood=output)
